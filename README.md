@@ -1,6 +1,9 @@
 [Fowler-Noll-Vo hash](http://en.wikipedia.org/wiki/Fowler_Noll_Vo_hash)
 ====================
 
+You can get a prebuilt JAR from the downloads section, or easily build
+it yourself with Maven.
+
 ```java
 import com.bitlove.fnv.FNV;
 
