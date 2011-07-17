@@ -4,7 +4,7 @@
 ```java
 import com.bitlove.fnv.FNV;
 
-(new FNV).fnv1a_64("blah".getBytes()) => 14233852691173593346
+(new FNV).fnv1a_64("blah".getBytes()) => java.math.BigInteger = 14233852691173593346
 ```
 
 Supported hashes are fnv1_32, fnv1_64, fnv1a_32, and fnv1a_64.
