@@ -3,10 +3,10 @@ package com.bitlove.fnv;
 import java.math.BigInteger;
 
 public class FNV {
-  private static final BigInteger INIT32  = new BigInteger("811c9dc5", 16);
+  private static final BigInteger INIT32  = new BigInteger("811c9dc5",         16);
   private static final BigInteger INIT64  = new BigInteger("cbf29ce484222325", 16);
-  private static final BigInteger PRIME32 = new BigInteger("01000193", 16);
-  private static final BigInteger PRIME64 = new BigInteger("100000001b3", 16);
+  private static final BigInteger PRIME32 = new BigInteger("01000193",         16);
+  private static final BigInteger PRIME64 = new BigInteger("100000001b3",      16);
   private static final BigInteger MOD32   = new BigInteger("2").pow(32);
   private static final BigInteger MOD64   = new BigInteger("2").pow(64);
 

@@ -1,12 +1,15 @@
 package com.bitlove.test;
 
 import com.bitlove.fnv.FNV;
-import org.junit.*;
-import static org.junit.Assert.*;
 import java.math.BigInteger;
 
+import org.junit.*;
+import static org.junit.Assert.*;
+
+// uhg.
+
 public class FNVTest {
-  private FNV fnv = new FNV();
+  private FNV fnv       = new FNV();
   private byte[][] data = new byte[148][];
 
   private byte[] multiplyArray(byte[] data, int times) {
