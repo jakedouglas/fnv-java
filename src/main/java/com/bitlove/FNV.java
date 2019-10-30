@@ -13,9 +13,9 @@ public class FNV {
   public BigInteger fnv1_32(byte[] data) {
     BigInteger hash = INIT32;
 
-    for (byte b : data) {
+    for (int index=0; index < data.length; index++) {
       hash = hash.multiply(PRIME32).mod(MOD32);
-      hash = hash.xor(BigInteger.valueOf((int) b & 0xff));
+      hash = hash.xor(BigInteger.valueOf((int) data[index] & 0xff));
     }
 
     return hash;
@@ -24,9 +24,9 @@ public class FNV {
   public BigInteger fnv1_64(byte[] data) {
     BigInteger hash = INIT64;
 
-    for (byte b : data) {
+    for (int index=0; index < data.length; index++) {
       hash = hash.multiply(PRIME64).mod(MOD64);
-      hash = hash.xor(BigInteger.valueOf((int) b & 0xff));
+      hash = hash.xor(BigInteger.valueOf((int) data[index] & 0xff));
     }
 
     return hash;
@@ -35,8 +35,8 @@ public class FNV {
   public BigInteger fnv1a_32(byte[] data) {
     BigInteger hash = INIT32;
 
-    for (byte b : data) {
-      hash = hash.xor(BigInteger.valueOf((int) b & 0xff));
+    for (int index=0; index < data.length; index++) {
+      hash = hash.xor(BigInteger.valueOf((int) data[index] & 0xff));
       hash = hash.multiply(PRIME32).mod(MOD32);
     }
 
@@ -46,8 +46,8 @@ public class FNV {
   public BigInteger fnv1a_64(byte[] data) {
     BigInteger hash = INIT64;
 
-    for (byte b : data) {
-      hash = hash.xor(BigInteger.valueOf((int) b & 0xff));
+    for (int index=0; index < data.length; index++) {
+      hash = hash.xor(BigInteger.valueOf((int) data[index] & 0xff));
       hash = hash.multiply(PRIME64).mod(MOD64);
     }
 
